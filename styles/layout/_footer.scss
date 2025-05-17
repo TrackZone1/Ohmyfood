@@ -2,5 +2,33 @@
 
 footer {
     background-color: variables.$footer-background-color;
-    color: variables.$footer-text-color;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+
+    img {
+        max-width: 139px;
+        filter: brightness(0) invert(1);
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            display: flex;
+            gap: 10px;
+            color: variables.$footer-text-color !important;
+            text-decoration: none;
+
+            i {
+                color: variables.$footer-text-color !important;
+                text-decoration: none;
+            }
+        }
+    }
 }

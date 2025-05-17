@@ -1,0 +1,17 @@
+@use "../variables";
+
+.locationSearch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+    background-color: variables.$location-search-background-color;
+    color: variables.$location-search-color;
+    display: flex;
+    gap: 10px;
+    font-weight: 700;
+
+    i {
+        color: variables.$location-search-color;
+    }
+}

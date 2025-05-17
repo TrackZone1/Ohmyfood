@@ -1,5 +1,4 @@
-@use "variables";
-
+@use "global";
 @use "layout/navbar";
 @use "layout/footer";
 
@@ -7,9 +6,4 @@
 @use "components/badge";
 @use "components/like";
 @use "components/card";
-
-* {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    color: variables.$text-color;
-}
+@use "components/locationSearch";
