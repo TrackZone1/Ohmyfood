@@ -1,0 +1,6 @@
+@use "../variables";
+
+footer {
+    background-color: variables.$footer-background-color;
+    color: variables.$footer-text-color;
+}

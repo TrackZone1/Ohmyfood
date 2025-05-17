@@ -1,0 +1,33 @@
+footer {
+  background-color: #353535;
+  color: #ffffff;
+}
+
+button {
+  padding: 10px 32px;
+  border-radius: 25px;
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.1);
+  transition: all 0.3s ease;
+}
+
+.badge-success {
+  background-color: #99e2d0;
+  color: #008766;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #000000;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,19 @@
+@use "../variables";
+
+button {
+    padding: 10px 32px;
+    border-radius: 25px;
+    background: linear-gradient(
+        0deg,
+        variables.$primary-color,
+        variables.$secondary-color
+    );
+    color: variables.$text-white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(1.1);
+    transition: all 0.3s ease;
+}
