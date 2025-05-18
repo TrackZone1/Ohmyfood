@@ -98,8 +98,9 @@ button:hover {
 .badge-success {
   background-color: #99e2d0;
   color: #008766;
-  padding: 5px 10px;
+  padding: 10px 15px;
   border-radius: 5px;
+  font-weight: 700;
 }
 
 .card {
@@ -131,6 +132,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color: #f6f6f6;
 }
 .sectionHero h1 {
   margin: 0;
@@ -163,47 +165,68 @@ button:hover {
 }
 
 .sectionRestaurants {
-  margin-top: 20px;
+  padding: 5rem 0;
+  background-color: #f6f6f6;
 }
 .sectionRestaurants h2 {
   margin: 0 1rem;
   margin-bottom: 10px;
 }
+.sectionRestaurants .listRestaurants {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 .sectionRestaurants div {
+  position: relative;
+}
+.sectionRestaurants div span {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.sectionRestaurants article {
   display: flex;
   flex-direction: column;
-  margin: 0 10px;
+  background-color: #fff;
+  border-radius: 20px;
 }
-.sectionRestaurants div article {
-  display: flex;
-  flex-direction: column;
-}
-.sectionRestaurants div article img {
+.sectionRestaurants article img {
   width: 100%;
-  max-height: 180px;
+  max-height: 150px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   margin-bottom: 10px;
+  object-fit: cover;
+  object-position: center;
 }
-.sectionRestaurants div article .content {
+.sectionRestaurants article .content {
   margin: 0 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.sectionRestaurants div article .content h3,
-.sectionRestaurants div article .content p {
-  margin: 0 0 10px 0;
+.sectionRestaurants article .content h3,
+.sectionRestaurants article .content p {
+  margin: 0;
 }
-.sectionRestaurants div article .content .restaurant {
+.sectionRestaurants article .content h3 {
+  font-weight: 700;
+}
+.sectionRestaurants article .content p {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.sectionRestaurants article .content .restaurant {
   display: flex;
   flex-direction: column;
 }
-.sectionRestaurants div article .content .favourite {
+.sectionRestaurants article .content .favourite {
   margin-right: 10px;
 }
-.sectionRestaurants div article .content .favourite i {
+.sectionRestaurants article .content .favourite i {
   font-size: 22px;
 }
 
