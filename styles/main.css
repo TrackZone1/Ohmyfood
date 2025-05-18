@@ -1,7 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: #000000;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+h1,
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.text-primary {
+  color: #9356dc;
+}
+
+.text-grey {
+  color: #7e7e7e;
 }
 
 nav {
@@ -17,6 +42,7 @@ nav button {
   position: absolute;
   left: 0;
   font-size: 1.5rem;
+  box-shadow: none !important;
 }
 nav img {
   display: block;
@@ -55,17 +81,18 @@ footer ul li i {
 }
 
 button {
-  padding: 10px 32px;
-  border-radius: 25px;
+  padding: 20px 32px;
+  border-radius: 999999px;
   background: linear-gradient(0deg, #9356dc, #ff79da);
   color: #ffffff;
+  font-weight: 700;
   border: none;
   cursor: pointer;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
 }
-
 button:hover {
-  filter: brightness(1.1);
   transition: all 0.3s ease;
+  opacity: 0.8;
 }
 
 .badge-success {
@@ -73,6 +100,13 @@ button:hover {
   color: #008766;
   padding: 5px 10px;
   border-radius: 5px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .locationSearch {
@@ -88,6 +122,89 @@ button:hover {
 }
 .locationSearch i {
   color: #626262;
+}
+
+.sectionHero {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.sectionHero h1 {
+  margin: 0;
+}
+.sectionHero p {
+  margin-bottom: 2rem;
+}
+
+.sectionFunctioning {
+  margin: 40px 0;
+}
+.sectionFunctioning h2 {
+  margin: 0 1rem;
+  margin-bottom: 10px;
+}
+.sectionFunctioning div {
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sectionFunctioning div .card {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 10px;
+}
+.sectionFunctioning div .card p {
+  margin: 0;
+}
+
+.sectionRestaurants {
+  margin-top: 20px;
+}
+.sectionRestaurants h2 {
+  margin: 0 1rem;
+  margin-bottom: 10px;
+}
+.sectionRestaurants div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+.sectionRestaurants div article {
+  display: flex;
+  flex-direction: column;
+}
+.sectionRestaurants div article img {
+  width: 100%;
+  max-height: 180px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: 10px;
+}
+.sectionRestaurants div article .content {
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.sectionRestaurants div article .content h3,
+.sectionRestaurants div article .content p {
+  margin: 0 0 10px 0;
+}
+.sectionRestaurants div article .content .restaurant {
+  display: flex;
+  flex-direction: column;
+}
+.sectionRestaurants div article .content .favourite {
+  margin-right: 10px;
+}
+.sectionRestaurants div article .content .favourite i {
+  font-size: 22px;
 }
 
 /*# sourceMappingURL=main.css.map */

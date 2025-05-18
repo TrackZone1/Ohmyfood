@@ -1,0 +1,53 @@
+.sectionRestaurants {
+    margin-top: 20px;
+    h2 {
+        margin: 0 1rem;
+        margin-bottom: 10px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+
+        margin: 0 10px;
+
+        article {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: 100%;
+                max-height: 180px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-bottom: 10px;
+            }
+
+            .content {
+                margin: 0 1rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                h3,
+                p {
+                    margin: 0 0 10px 0;
+                }
+
+                .restaurant {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .favourite {
+                    margin-right: 10px;
+
+                    i {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}

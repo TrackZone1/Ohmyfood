@@ -1,0 +1,25 @@
+.sectionFunctioning {
+    margin: 40px 0;
+    h2 {
+        margin: 0 1rem;
+        margin-bottom: 10px;
+    }
+
+    div {
+        margin: 0 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .card {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            gap: 10px;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
