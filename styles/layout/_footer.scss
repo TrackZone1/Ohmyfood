@@ -19,6 +19,7 @@ footer {
         list-style: none;
         margin: 0;
         padding: 0;
+
         li {
             display: flex;
             gap: 10px;
@@ -29,6 +30,10 @@ footer {
                 color: variables.$footer-text-color !important;
                 text-decoration: none;
             }
+        }
+
+        li:not(:has(i)) {
+            font-weight: 400;
         }
     }
 }

@@ -1,1 +1,11 @@
 @use "../variables";
+
+.like {
+    background: linear-gradient(
+        0deg,
+        variables.$primary-color,
+        variables.$secondary-color
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

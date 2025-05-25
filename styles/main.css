@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
   font-family: "Roboto", sans-serif;
@@ -19,6 +20,11 @@ h1,
 h2 {
   font-size: 24px;
   font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  display: block;
 }
 
 .text-primary {
@@ -79,6 +85,9 @@ footer ul li i {
   color: #ffffff !important;
   text-decoration: none;
 }
+footer ul li:not(:has(i)) {
+  font-weight: 400;
+}
 
 button {
   padding: 20px 32px;
@@ -101,6 +110,12 @@ button:hover {
   padding: 10px 15px;
   border-radius: 5px;
   font-weight: 700;
+}
+
+.like {
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .card {
@@ -139,6 +154,7 @@ button:hover {
 }
 .sectionHero p {
   margin-bottom: 2rem;
+  font-weight: 300;
 }
 
 .sectionFunctioning {
@@ -167,7 +183,7 @@ button:hover {
   display: flex;
   gap: 1rem;
   align-items: center;
-  font-weight: 700;
+  font-weight: 500;
 }
 .sectionFunctioning div .card .functionNumber {
   background-color: #9356dc;
@@ -242,6 +258,7 @@ button:hover {
 .sectionRestaurants article .content p {
   margin-top: 5px;
   margin-bottom: 15px;
+  font-weight: 300;
 }
 .sectionRestaurants article .content .restaurant {
   display: flex;
@@ -252,6 +269,87 @@ button:hover {
 }
 .sectionRestaurants article .content .favourite i {
   font-size: 22px;
+}
+
+.sectionMenuRestaurantImage {
+  width: 100%;
+  min-height: 275px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 2rem;
+}
+
+.sectionMenu {
+  border-radius: 40px;
+  background: #f6f6f6;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+  transform: translateY(-4rem);
+  margin-top: -4rem;
+}
+.sectionMenu .title {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sectionMenu .title h1 {
+  font-family: "Shrikhand";
+  font-weight: 400;
+}
+.sectionMenu .title i {
+  font-size: 22px;
+}
+.sectionMenu .content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.sectionMenu .content .partMenu .titlePartMenu {
+  border-bottom: 3px solid #99e2d0;
+  width: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.2rem;
+}
+.sectionMenu .content .partMenu .titlePartMenu h2 {
+  font-weight: 300;
+  font-size: 16px;
+  margin: 0;
+}
+.sectionMenu .content .partMenu .partMenuContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.sectionMenu .content .partMenu .partMenuContent .card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.sectionMenu .content .partMenu .partMenuContent .card h3 {
+  margin: 0;
+}
+.sectionMenu .content .partMenu .partMenuContent .card .description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sectionMenu .content .partMenu .partMenuContent .card .description p {
+  margin: 0;
+}
+.sectionMenu .content .partMenu .partMenuContent .card .description p:first-of-type {
+  font-weight: 300;
+}
+.sectionMenu .content .submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.sectionMenu .content .submit button {
+  width: 100%;
+  max-width: 186px;
 }
 
 /*# sourceMappingURL=main.css.map */
