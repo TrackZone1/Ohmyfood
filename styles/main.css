@@ -114,9 +114,26 @@ button:hover {
 }
 
 .like {
+  display: none;
   background: linear-gradient(0deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.favourite {
+  cursor: pointer;
+}
+
+input.favouriteToggle {
+  display: none;
+}
+
+input.favouriteToggle:checked ~ .like {
+  display: inline-block;
+}
+
+input.favouriteToggle:checked ~ .unlike {
+  display: none;
 }
 
 .card {
@@ -373,65 +390,94 @@ button:hover {
   gap: 1.5rem;
 }
 .sectionMenu .content .partMenu .partMenuContent .card {
+  cursor: pointer;
   display: flex;
-  padding: 0;
   position: relative;
   overflow: hidden;
+  padding: 0;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
 }
 .sectionMenu .content .partMenu .partMenuContent .card .cardContent {
-  width: 100%;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   padding: 1rem;
+  min-width: 0;
 }
 .sectionMenu .content .partMenu .partMenuContent .card .cardContent h3 {
   margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 .sectionMenu .content .partMenu .partMenuContent .card .cardContent .description {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+  min-width: 0;
 }
 .sectionMenu .content .partMenu .partMenuContent .card .cardContent .description p {
   margin: 0;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .sectionMenu .content .partMenu .partMenuContent .card .cardContent .description p:first-of-type {
   font-weight: 300;
-  display: flex;
-  justify-content: flex-start;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 .sectionMenu .content .partMenu .partMenuContent .card .cardContent .description p:last-of-type {
+  margin-left: 1rem;
+  flex-shrink: 0;
+  text-align: right;
   display: flex;
-  justify-content: flex-end;
-  margin-left: auto;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 1;
 }
 .sectionMenu .content .partMenu .partMenuContent .card .check {
-  margin-left: auto;
   display: flex;
   align-items: center;
-  background-color: #99e2d0;
+  background: #99e2d0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  margin-left: auto;
   opacity: 0;
   transform: translateX(30px);
-  transition: opacity 0.3s, transform 0.3s;
   width: 0;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
   overflow: hidden;
+  transition: opacity 0.3s, transform 0.3s, width 0.8s, padding 0.8s;
 }
 .sectionMenu .content .partMenu .partMenuContent .card .check i {
-  color: white;
+  color: #fff;
   font-size: 20px;
 }
-.sectionMenu .content .partMenu .partMenuContent .card:hover .check {
-  opacity: 1;
-  transform: translateX(0);
-  width: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  overflow: visible;
+.sectionMenu .content .partMenu .partMenuContent .card input.cardToggle {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .sectionMenu .content .partMenu .partMenuContent .card input.cardToggle:checked ~ .check {
+    opacity: 1;
+    transform: translateX(0);
+    width: 20px;
+    padding: 0 1.5rem;
+    overflow: visible;
+  }
+}
+@media (min-width: 1024px) {
+  .sectionMenu .content .partMenu .partMenuContent .card:hover .check {
+    opacity: 1;
+    transform: translateX(0);
+    width: 20px;
+    padding: 0 1.5rem;
+    overflow: visible;
+  }
 }
 .sectionMenu .content .submit {
   display: flex;

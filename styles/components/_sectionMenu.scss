@@ -85,76 +85,104 @@
                 gap: 1.5rem;
 
                 .card {
+                    cursor: pointer;
                     display: flex;
-                    padding: 0;
                     position: relative;
                     overflow: hidden;
+                    padding: 0;
+                    background: #fff;
+                    border-radius: 15px;
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+                    transition: box-shadow 0.2s;
 
                     .cardContent {
-                        width: 100%;
+                        flex: 1 1 auto;
                         display: flex;
                         flex-direction: column;
                         gap: 0.5rem;
                         padding: 1rem;
+                        min-width: 0;
 
                         h3 {
                             margin: 0;
+                            font-size: 1.1rem;
+                            font-weight: 700;
                         }
 
                         .description {
                             display: flex;
                             justify-content: space-between;
-                            align-items: center;
+                            align-items: flex-end;
+                            min-width: 0;
 
                             p {
                                 margin: 0;
-                            }
+                                font-size: 1rem;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
 
-                            p:first-of-type {
-                                font-weight: 300;
-                                display: flex;
-                                justify-content: flex-start;
-                            }
-                            p:last-of-type {
-                                display: flex;
-                                justify-content: flex-end;
-                                margin-left: auto;
+                                &:first-of-type {
+                                    font-weight: 300;
+                                    flex: 1 1 auto;
+                                    min-width: 0;
+                                }
+
+                                &:last-of-type {
+                                    margin-left: 1rem;
+                                    flex-shrink: 0;
+                                    text-align: right;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-end;
+                                    z-index: 1;
+                                }
                             }
                         }
                     }
 
                     .check {
-                        margin-left: auto;
                         display: flex;
                         align-items: center;
-                        background-color: variables.$success-color;
+                        background: variables.$success-color;
                         border-top-right-radius: 15px;
                         border-bottom-right-radius: 15px;
+                        margin-left: auto;
                         opacity: 0;
                         transform: translateX(30px);
-                        transition: opacity 0.3s, transform 0.3s;
                         width: 0;
-                        padding-left: 0;
-                        padding-right: 0;
+                        padding: 0;
                         overflow: hidden;
+                        transition: opacity 0.3s, transform 0.3s, width 0.8s,
+                            padding 0.8s;
 
                         i {
-                            color: white;
+                            color: #fff;
                             font-size: 20px;
                         }
                     }
 
-                    &:hover .check {
-                        opacity: 1;
-                        transform: translateX(0);
-                        width: auto;
-                        padding-left: 1.5rem;
-                        padding-right: 1.5rem;
-                        overflow: visible;
+                    input.cardToggle {
+                        display: none;
                     }
 
-                    &:hover .cardContent {
-                        .description {
+                    @media (max-width: variables.$desktop-width) {
+                        input.cardToggle:checked ~ .check {
+                            opacity: 1;
+                            transform: translateX(0);
+                            width: 20px;
+                            padding: 0 1.5rem;
+                            overflow: visible;
+                        }
+                    }
+
+                    @media (min-width: variables.$desktop-width) {
+                        &:hover .check {
+                            opacity: 1;
+                            transform: translateX(0);
+                            width: 20px;
+                            padding: 0 1.5rem;
+                            overflow: visible;
                         }
                     }
                 }

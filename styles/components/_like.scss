@@ -1,6 +1,7 @@
 @use "../variables";
 
 .like {
+    display: none;
     background: linear-gradient(
         0deg,
         variables.$primary-color,
@@ -8,4 +9,19 @@
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.favourite {
+    cursor: pointer;
+}
+
+input.favouriteToggle {
+    display: none;
+}
+input.favouriteToggle:checked ~ .like {
+    display: inline-block;
+}
+
+input.favouriteToggle:checked ~ .unlike {
+    display: none;
 }

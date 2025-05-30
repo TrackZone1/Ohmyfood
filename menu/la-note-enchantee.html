@@ -39,9 +39,11 @@
             <section class="sectionMenu">
                 <div class="title">
                     <h1>La note enchantée</h1>
-                    <div class="favourite">
-                        <i class="fa-light fa-heart"></i>
-                    </div>
+                    <label class="favourite">
+                        <input type="checkbox" class="favouriteToggle" />
+                        <i class="fa-light fa-heart unlike"></i>
+                        <i class="fa-solid fa-heart like"></i>
+                    </label>
                 </div>
                 <div class="content">
                     <div class="partMenu">
@@ -49,36 +51,61 @@
                             <h2>ENTRÉES</h2>
                         </div>
                         <div class="partMenuContent">
-                            <div class="card">
-                                <h3>Ravioles de foie gras</h3>
-                                <div class="description">
-                                    <p>
-                                        Accompagnées de leur crème à la truffe
-                                    </p>
-                                    <p class="price">25€</p>
+                            <label class="card">
+                                <input type="checkbox" class="cardToggle" />
+                                <div class="cardContent">
+                                    <h3>Ravioles de foie gras</h3>
+                                    <div class="description">
+                                        <p>
+                                            Accompagnées de leur crème à la
+                                            truffe
+                                        </p>
+                                        <p class="price">25€</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card">
-                                <h3>Caviar osciètre</h3>
-                                <div class="description">
-                                    <p>Sur blini à la farine de blé noir</p>
-                                    <p class="price">35€</p>
+                                <div class="check">
+                                    <i class="fa-solid fa-circle-check"></i>
                                 </div>
-                            </div>
-                            <div class="card">
-                                <h3>Homard et espuma de potiron</h3>
-                                <div class="description">
-                                    <p>Marinés aux zestes d'orange</p>
-                                    <p class="price">20€</p>
+                            </label>
+                            <label class="card">
+                                <input type="checkbox" class="cardToggle" />
+                                <div class="cardContent">
+                                    <h3>Caviar osciètre</h3>
+                                    <div class="description">
+                                        <p>Sur blini à la farine de blé noir</p>
+                                        <p class="price">35€</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card">
-                                <h3>Foie gras de canard cuit entier</h3>
-                                <div class="description">
-                                    <p>Confiture de figue et pain toasté</p>
-                                    <p class="price">35€</p>
+                                <div class="check">
+                                    <i class="fa-solid fa-circle-check"></i>
                                 </div>
-                            </div>
+                            </label>
+                            <label class="card">
+                                <input type="checkbox" class="cardToggle" />
+                                <div class="cardContent">
+                                    <h3>Homard et espuma de potiron</h3>
+                                    <div class="description">
+                                        <p>Marinés aux zestes d'orange</p>
+                                        <p class="price">20€</p>
+                                    </div>
+                                </div>
+                                <div class="check">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </label>
+                            <label class="card">
+                                <input type="checkbox" class="cardToggle" />
+                                <div class="cardContent">
+                                    <h3>Foie gras de canard cuit entier</h3>
+                                    <div class="description">
+                                        <p>Confiture de figue et pain toasté</p>
+                                        <p class="price">35€</p>
+                                    </div>
+                                </div>
+                                <div class="check">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </label>
                         </div>
                     </div>
                     <div class="partMenu">
@@ -86,27 +113,47 @@
                             <h2>PLATS</h2>
                         </div>
                         <div class="partMenuContent">
-                            <div class="card">
-                                <h3>Noix de coquilles Saint-Jacques</h3>
-                                <div class="description">
-                                    <p>Sur lit de purée de céleri-rave</p>
-                                    <p class="price">40€</p>
+                            <label class="card">
+                                <input type="checkbox" class="cardToggle" />
+                                <div class="cardContent">
+                                    <h3>Noix de coquilles Saint-Jacques</h3>
+                                    <div class="description">
+                                        <p>Sur lit de purée de céleri-rave</p>
+                                        <p class="price">40€</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card">
-                                <h3>Langoustine poêlée</h3>
-                                <div class="description">
-                                    <p>Purée de patate douce</p>
-                                    <p class="price">35€</p>
+                                <div class="check">
+                                    <i class="fa-solid fa-circle-check"></i>
                                 </div>
-                            </div>
-                            <div class="card">
-                                <h3>Mijoté de queue de bœuf</h3>
-                                <div class="description">
-                                    <p>Et riz sauvage aux zestes de citron</p>
-                                    <p class="price">44€</p>
+                            </label>
+                            <label class="card">
+                                <input type="checkbox" class="cardToggle" />
+                                <div class="cardContent">
+                                    <h3>Langoustine poêlée</h3>
+                                    <div class="description">
+                                        <p>Purée de patate douce</p>
+                                        <p class="price">35€</p>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="check">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </label>
+                            <label class="card">
+                                <input type="checkbox" class="cardToggle" />
+                                <div class="cardContent">
+                                    <h3>Mijoté de queue de bœuf</h3>
+                                    <div class="description">
+                                        <p>
+                                            Et riz sauvage aux zestes de citron
+                                        </p>
+                                        <p class="price">44€</p>
+                                    </div>
+                                </div>
+                                <div class="check">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </label>
                         </div>
                     </div>
                     <div class="partMenu">
@@ -114,29 +161,48 @@
                             <h2>DESSERTS</h2>
                         </div>
                         <div class="partMenuContent">
-                            <div class="card">
-                                <h3>Macaron noisette et chocolat</h3>
-                                <div class="description">
-                                    <p>
-                                        Glace au caramel brun et sel de Guérande
-                                    </p>
-                                    <p class="price">18€</p>
+                            <label class="card">
+                                <input type="checkbox" class="cardToggle" />
+                                <div class="cardContent">
+                                    <h3>Macaron noisette et chocolat</h3>
+                                    <div class="description">
+                                        <p>
+                                            Glace au caramel brun et sel de
+                                            Guérande
+                                        </p>
+                                        <p class="price">18€</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card">
-                                <h3>Baba au rhum revisité</h3>
-                                <div class="description">
-                                    <p>Avec son coulis de citron</p>
-                                    <p class="price">22€</p>
+                                <div class="check">
+                                    <i class="fa-solid fa-circle-check"></i>
                                 </div>
-                            </div>
-                            <div class="card">
-                                <h3>Tarte au citron meringuée</h3>
-                                <div class="description">
-                                    <p>Déstructurée</p>
-                                    <p class="price">23€</p>
+                            </label>
+                            <label class="card">
+                                <input type="checkbox" class="cardToggle" />
+                                <div class="cardContent">
+                                    <h3>Baba au rhum revisité</h3>
+                                    <div class="description">
+                                        <p>Avec son coulis de citron</p>
+                                        <p class="price">22€</p>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="check">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </label>
+                            <label class="card">
+                                <input type="checkbox" class="cardToggle" />
+                                <div class="cardContent">
+                                    <h3>Tarte au citron meringuée</h3>
+                                    <div class="description">
+                                        <p>Déstructurée</p>
+                                        <p class="price">23€</p>
+                                    </div>
+                                </div>
+                                <div class="check">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </label>
                         </div>
                     </div>
                     <div class="submit">
