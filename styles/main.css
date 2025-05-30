@@ -98,9 +98,10 @@ button {
   border: none;
   cursor: pointer;
   box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 button:hover {
-  transition: all 0.3s ease;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.35);
   opacity: 0.8;
 }
 
@@ -140,6 +141,34 @@ button:hover {
   color: #626262;
 }
 
+.loader {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loader-fadeout 2s 1.5s forwards;
+}
+
+@keyframes loader-fadeout {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+.sectionRestaurants {
+  opacity: 0;
+  animation: showRestaurants 0.5s 2s forwards;
+}
+
+@keyframes showRestaurants {
+  to {
+    opacity: 1;
+  }
+}
 .sectionHero {
   padding: 2rem 1rem 4rem 1rem;
   display: flex;
@@ -273,23 +302,24 @@ button:hover {
 
 .sectionMenuRestaurantImage {
   width: 100%;
-  min-height: 275px;
+  max-height: 275px;
   object-fit: cover;
   object-position: center;
   margin-bottom: 2rem;
 }
 
 .sectionMenu {
-  border-radius: 40px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
   background: #f6f6f6;
-  padding: 0 1rem;
+  padding: 0 1rem 2rem 1rem;
   position: relative;
   z-index: 1;
-  transform: translateY(-4rem);
-  margin-top: -4rem;
+  margin-top: -5rem;
 }
 .sectionMenu .title {
   padding-top: 1rem;
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -305,6 +335,26 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+.sectionMenu .content .partMenu {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s forwards;
+}
+.sectionMenu .content .partMenu:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.sectionMenu .content .partMenu:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.sectionMenu .content .partMenu:nth-child(3) {
+  animation-delay: 1s;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .sectionMenu .content .partMenu .titlePartMenu {
   border-bottom: 3px solid #99e2d0;
@@ -323,24 +373,65 @@ button:hover {
   gap: 1.5rem;
 }
 .sectionMenu .content .partMenu .partMenuContent .card {
-  padding: 1rem;
+  display: flex;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+.sectionMenu .content .partMenu .partMenuContent .card .cardContent {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  padding: 1rem;
 }
-.sectionMenu .content .partMenu .partMenuContent .card h3 {
+.sectionMenu .content .partMenu .partMenuContent .card .cardContent h3 {
   margin: 0;
 }
-.sectionMenu .content .partMenu .partMenuContent .card .description {
+.sectionMenu .content .partMenu .partMenuContent .card .cardContent .description {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.sectionMenu .content .partMenu .partMenuContent .card .description p {
+.sectionMenu .content .partMenu .partMenuContent .card .cardContent .description p {
   margin: 0;
 }
-.sectionMenu .content .partMenu .partMenuContent .card .description p:first-of-type {
+.sectionMenu .content .partMenu .partMenuContent .card .cardContent .description p:first-of-type {
   font-weight: 300;
+  display: flex;
+  justify-content: flex-start;
+}
+.sectionMenu .content .partMenu .partMenuContent .card .cardContent .description p:last-of-type {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+.sectionMenu .content .partMenu .partMenuContent .card .check {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  background-color: #99e2d0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.3s, transform 0.3s;
+  width: 0;
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+}
+.sectionMenu .content .partMenu .partMenuContent .card .check i {
+  color: white;
+  font-size: 20px;
+}
+.sectionMenu .content .partMenu .partMenuContent .card:hover .check {
+  opacity: 1;
+  transform: translateX(0);
+  width: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  overflow: visible;
 }
 .sectionMenu .content .submit {
   display: flex;
