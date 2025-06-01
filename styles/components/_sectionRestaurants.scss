@@ -1,3 +1,5 @@
+@use "../variables";
+
 .sectionRestaurants {
     padding: 5rem 0;
     background-color: #f6f6f6;
@@ -9,9 +11,16 @@
 
     .listRestaurants {
         margin: 0 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
+        @media (max-width: variables.$desktop-width) {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        @media (min-width: variables.$desktop-width) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+        }
     }
 
     div {

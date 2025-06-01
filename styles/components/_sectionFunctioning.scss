@@ -2,18 +2,30 @@
 
 .sectionFunctioning {
     margin: 4rem 10px;
+
+    .container {
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
     h2 {
         margin: 0 10px;
         margin-bottom: 2rem;
     }
 
     div {
-        margin: 0 10px;
         display: flex;
-        flex-direction: column;
-        gap: 10px;
+
+        gap: 30px;
+
+        @media (max-width: variables.$desktop-width) {
+            flex-direction: column;
+        }
 
         .card {
+            width: 100%;
+            background-color: #f6f6f6;
             display: flex;
             flex-direction: row;
             align-items: flex-start;
@@ -38,7 +50,7 @@
                 align-items: center;
                 border-radius: 9999px;
                 position: absolute;
-                left: -20px;
+                left: -10px;
                 top: 50%;
                 transform: translateY(-50%);
                 box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);

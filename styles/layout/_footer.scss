@@ -3,9 +3,18 @@
 footer {
     background-color: variables.$footer-background-color;
     display: flex;
-    flex-direction: column;
     gap: 30px;
     padding: 20px;
+
+    @media (max-width: variables.$desktop-width) {
+        flex-direction: column;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+        min-height: 114px;
+        flex-direction: row-reverse;
+        align-items: end;
+    }
 
     img {
         max-width: 139px;
@@ -14,11 +23,17 @@ footer {
 
     ul {
         display: flex;
-        flex-direction: column;
         gap: 10px;
         list-style: none;
         margin: 0;
         padding: 0;
+
+        @media (max-width: variables.$desktop-width) {
+            flex-direction: column;
+        }
+        @media (min-width: variables.$desktop-width) {
+            flex-direction: row;
+        }
 
         li {
             display: flex;

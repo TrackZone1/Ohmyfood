@@ -6,6 +6,7 @@
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     color: variables.$text-color;
+    box-sizing: border-box;
 }
 
 body {
@@ -34,4 +35,10 @@ a {
 }
 .text-grey {
     color: variables.$text-grey;
+}
+
+.container {
+    max-width: variables.$desktop-width;
+    margin: 0 auto;
+    width: 100%;
 }
