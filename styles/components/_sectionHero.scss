@@ -1,5 +1,7 @@
+@use "../variables";
+
 .sectionHero {
-    padding: 2rem 1rem 4rem 1rem;
+    padding: 2rem 1rem 2rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,6 +11,9 @@
 
     h1 {
         margin: 0;
+        @media (min-width: variables.$desktop-width) {
+            margin-bottom: 1.5rem;
+        }
     }
 
     p {

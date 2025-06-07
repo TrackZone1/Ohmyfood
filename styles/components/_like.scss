@@ -13,6 +13,14 @@
 
 .favourite {
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
 }
 
 input.favouriteToggle {
