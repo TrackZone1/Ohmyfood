@@ -45,6 +45,12 @@ footer {
                 color: variables.$footer-text-color !important;
                 text-decoration: none;
             }
+
+            a {
+                color: variables.$footer-text-color !important;
+                text-decoration: none;
+                font-weight: 400;
+            }
         }
 
         li:not(:has(i)) {

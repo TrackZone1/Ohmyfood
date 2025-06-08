@@ -51,10 +51,9 @@ nav {
   justify-content: center;
   position: relative;
 }
-nav button {
-  background: transparent !important;
+nav a {
   position: absolute;
-  left: 0;
+  left: 2rem;
   font-size: 1.5rem;
   box-shadow: none !important;
 }
@@ -113,6 +112,11 @@ footer ul li i {
   color: #ffffff !important;
   text-decoration: none;
 }
+footer ul li a {
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 400;
+}
 footer ul li:not(:has(i)) {
   font-weight: 400;
 }
@@ -149,6 +153,7 @@ button:hover {
 }
 
 .favourite {
+  z-index: 9990;
   cursor: pointer;
   display: flex;
   justify-content: center;
