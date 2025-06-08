@@ -34,6 +34,7 @@
     }
 
     article {
+        position: relative;
         display: flex;
         flex-direction: column;
         background-color: #fff;
@@ -75,13 +76,16 @@
                 display: flex;
                 flex-direction: column;
             }
+        }
 
-            .favourite {
-                margin-right: 10px;
+        .favourite {
+            position: absolute;
+            right: 10px;
+            bottom: 30px;
+            margin-right: 10px;
 
-                i {
-                    font-size: 22px;
-                }
+            i {
+                font-size: 22px;
             }
         }
     }

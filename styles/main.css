@@ -153,7 +153,6 @@ button:hover {
 }
 
 .favourite {
-  z-index: 9990;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -346,6 +345,7 @@ input.favouriteToggle:checked ~ .unlike {
   right: 15px;
 }
 .sectionRestaurants article {
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -383,10 +383,13 @@ input.favouriteToggle:checked ~ .unlike {
   display: flex;
   flex-direction: column;
 }
-.sectionRestaurants article .content .favourite {
+.sectionRestaurants article .favourite {
+  position: absolute;
+  right: 10px;
+  bottom: 30px;
   margin-right: 10px;
 }
-.sectionRestaurants article .content .favourite i {
+.sectionRestaurants article .favourite i {
   font-size: 22px;
 }
 
@@ -500,7 +503,7 @@ input.favouriteToggle:checked ~ .unlike {
   padding: 1rem;
   min-width: 0;
 }
-.sectionMenu .content .partMenu .partMenuContent .card .cardContent h3 {
+.sectionMenu .content .partMenu .partMenuContent .card .cardContent span {
   margin: 0;
   font-size: 1.1rem;
   font-weight: 700;
@@ -511,19 +514,19 @@ input.favouriteToggle:checked ~ .unlike {
   align-items: flex-end;
   min-width: 0;
 }
-.sectionMenu .content .partMenu .partMenuContent .card .cardContent .description p {
+.sectionMenu .content .partMenu .partMenuContent .card .cardContent .description span {
   margin: 0;
   font-size: 1rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.sectionMenu .content .partMenu .partMenuContent .card .cardContent .description p:first-of-type {
+.sectionMenu .content .partMenu .partMenuContent .card .cardContent .description span:first-of-type {
   font-weight: 300;
   flex: 1 1 auto;
   min-width: 0;
 }
-.sectionMenu .content .partMenu .partMenuContent .card .cardContent .description p:last-of-type {
+.sectionMenu .content .partMenu .partMenuContent .card .cardContent .description span:last-of-type {
   margin-left: 1rem;
   flex-shrink: 0;
   text-align: right;
