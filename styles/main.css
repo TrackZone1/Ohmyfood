@@ -145,22 +145,44 @@ button:hover {
   font-weight: 700;
 }
 
-.like {
-  display: none;
-  background: linear-gradient(0deg, #9356dc, #ff79da);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .favourite {
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  width: 32px;
+  height: 32px;
 }
 .favourite i {
   padding-left: 4px;
   padding-right: 4px;
+}
+
+.like,
+.unlike {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.like {
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 0.5s ease, background 0.5s ease;
+}
+
+.unlike {
+  z-index: 1;
 }
 
 input.favouriteToggle {
@@ -168,11 +190,17 @@ input.favouriteToggle {
 }
 
 input.favouriteToggle:checked ~ .like {
-  display: inline-block;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 input.favouriteToggle:checked ~ .unlike {
   display: none;
+}
+
+.favourite:hover .like {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .card {

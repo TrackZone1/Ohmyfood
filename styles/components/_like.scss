@@ -1,21 +1,13 @@
 @use "../variables";
 
-.like {
-    display: none;
-    background: linear-gradient(
-        0deg,
-        variables.$primary-color,
-        variables.$secondary-color
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .favourite {
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    width: 32px; // ajuste selon la taille de tes icônes
+    height: 32px;
 
     i {
         padding-left: 4px;
@@ -23,13 +15,49 @@
     }
 }
 
+.like,
+.unlike {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.like {
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    background: linear-gradient(
+        0deg,
+        variables.$primary-color,
+        variables.$secondary-color
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: opacity 0.5s ease, background 0.5s ease;
+}
+
+.unlike {
+    z-index: 1;
+}
+
 input.favouriteToggle {
     display: none;
 }
 input.favouriteToggle:checked ~ .like {
-    display: inline-block;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 input.favouriteToggle:checked ~ .unlike {
     display: none;
+}
+
+.favourite:hover .like {
+    opacity: 1;
+    pointer-events: auto;
 }
